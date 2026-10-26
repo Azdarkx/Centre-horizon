@@ -238,3 +238,9 @@ main section {
         padding-bottom: 30px !important;
     }
 }
+aside{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 460px;
+
+}
