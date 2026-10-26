@@ -11,31 +11,37 @@
 
 <body>
 
-    <!-- En-tête -->
-    <header class="navbar navbar-dark bg-dark p-0">
+    <!-- en-tete et navigation -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-bleu">
         <div class="container">
-            <table class="mise-en-page entete" role="presentation">
-                <tbody>
-                    <tr>
-                        <td><a class="navbar-brand fw-bold" href="index.html">Centre <span
-                                    class="text-info">Horizon</span></a></td>
-                        <td>
-                            <table class="menu" role="presentation" aria-label="Menu principal">
-                                <tbody>
-                                    <tr>
-                                        <td><a class="nav-link" href="index.html">Accueil</a></td>
-                                        <td><a class="nav-link fw-bold text-warning" aria-current="page"
-                                                href="formation.html">Formations</a></td>
-                                        <td><a class="nav-link" href="index.html#sessions">Sessions</a></td>
-                                        <td><a class="nav-link" href="inscription.html">Inscription</a></td>
-                                        <td><a class="nav-link" href="index.html#contact">Contact</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <a class="navbar-brand fw-bold" href="index.html">
+                Centre <span class="text-info">Horizon</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Ouvrir le menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" aria-current="page">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formation2.html">Formations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#sessions">Sessions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inscription.html">Inscription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
 
