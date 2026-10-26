@@ -1,45 +1,454 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centre Horizon</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header class="p-2 bg-dark text-white d-flex justify-content-between">
-        <h5 class="m-1">Centre <span class="text-primary">Horizon</span></h5>
-        <nav class="m-2">
-            <a href="#" class="text-white me-3 text-decoration-none">Acceuil</a>
-            <a href="#" class="text-white me-3 text-decoration-none">Formation</a>
-            <a href="#" class="text-white me-3 text-decoration-none">Sessions</a>
-            <a href="#" class="text-white me-3 text-decoration-none">Contact</a>
-        </nav>
-    </header>
-    <main>
-            <div class="text-center bg-primary p-5">
-                <h1 class="text-white text-center p-3 fs-1">Apprenez un métier du numérique</h1>
-                <p class="text-white text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe magni repellat provident itaque, assumenda et vel atque commodi qui nobis eius, nesciunt accusamus unde dolorem.</p>
-                <button class="btn btn-outline-warning m-4 fw-bold">Voir les formations</button>
-            </div>
-            <section class="container py-5">
-  <h2 class="mb-4">Nos formations</h2>
-  <div class="row g-4">
 
-    <div class="col-md-4">
-      <article class="card h-100">
-        <img src="https://th.bing.com/th/id/OIP.JWQqLUzxg1jacP3boSwfAwHaFj?w=213&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" class="img-thumbnail" alt="Développeur web">
-        <div class="card-body">
-          <h3 class="card-title fs-5">Développeur web</h3>
-          <p class="card-text">Créer des sites et des applications, du HTML au back-end.</p>
-          <p class="small text-muted">Durée : 6 mois · Niveau : débutant</p>
-          <a href="#" class="btn btn-outline-primary">Demander des informations</a>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #293444;
+        }
+
+        .bg-bleu {
+            background: #102e5b;
+        }
+
+        .accueil {
+            background: #1e70e8;
+        }
+
+        .accueil p {
+            max-width: 500px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .btn-warning {
+            background: #ffad00;
+            border-color: #ffad00;
+        }
+
+        .titre-section {
+            border-left: 4px solid #1673ff;
+            padding-left: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card {
+            overflow: hidden;
+            border-color: #d5dbe3;
+        }
+
+        .card-body a, table a {
+            color: #0759b5;
+            font-weight: bold;
+        }
+
+        .illustration {
+            height: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .web {
+            background: #2071e8;
+        }
+
+        .code {
+            width: 65%;
+            padding: 20px 12px;
+            background: #102e5b;
+            border-radius: 6px;
+        }
+
+        .code div {
+            height: 4px;
+            width: 50%;
+            margin: 8px 0;
+            background: #75caff;
+            border-radius: 5px;
+        }
+
+        .code div:nth-child(2) { width: 75%; }
+        .code div:nth-child(3) { width: 50%; }
+        .code div:nth-child(4) {
+            width: 60%;
+            background: #ffad00;
+        }
+        .code div:nth-child(5) {
+            width: 35%;
+            background: #ffad00;
+        }
+
+        .donnees {
+            background: #198b40;
+            position: relative;
+        }
+
+        .barres {
+            display: flex;
+            align-items: end;
+            gap: 12px;
+            height: 85px;
+        }
+
+        .barres span {
+            width: 25px;
+            background: white;
+            border-radius: 2px;
+        }
+
+        .barres span:nth-child(1) { height: 45px; }
+        .barres span:nth-child(2) { height: 65px; }
+        .barres span:nth-child(3) { height: 90px; }
+        .barres span:nth-child(4) { height: 55px; }
+
+        .ligne {
+            position: absolute;
+            width: 65%;
+            height: 50px;
+            top: 45px;
+            border-top: 4px solid #ffdc65;
+            transform: rotate(-22deg);
+        }
+
+        .ia {
+            background: #7d1fa0;
+        }
+
+        .reseau {
+            position: relative;
+            width: 65%;
+            height: 100px;
+        }
+
+        .reseau::before {
+            content: "";
+            position: absolute;
+            inset: 10px 0;
+            background:
+                linear-gradient(25deg, transparent 49%, white 50%, transparent 52%),
+                linear-gradient(-15deg, transparent 49%, white 50%, transparent 52%);
+        }
+
+        .n {
+            position: absolute;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .n1 { top: 10px; left: 0; }
+        .n2 { top: 0; left: 48%; }
+        .n3 { top: 42px; left: 48%; }
+        .n4 { top: 70px; left: 0; }
+        .n5 { top: 80px; left: 48%; }
+        .n6 {
+            top: 40px;
+            right: 0;
+            width: 23px;
+            height: 23px;
+            background: #ffdb55;
+        }
+
+        .table-bleu th {
+            color: white;
+            background: #102e5b;
+        }
+
+        .contact {
+            background: #f1f2f5;
+        }
+
+        .formulaire {
+            max-width: 760px;
+            border: 1px solid #d5dbe3;
+            border-radius: 6px;
+        }
+
+        .form-control, .form-select {
+            border-color: #9aa4b3;
+        }
+
+        @media (max-width: 767px) {
+            .accueil h1 {
+                font-size: 1.5rem !important;
+            }
+
+            .accueil {
+                padding-top: 35px !important;
+                padding-bottom: 35px !important;
+            }
+
+            .illustration {
+                height: 135px;
+            }
+
+            .titre-section {
+                font-size: 1.25rem;
+            }
+
+            .formulaire {
+                padding: 12px !important;
+            }
+
+            table {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- navigation -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-bleu px-3 px-lg-5">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                Centre <span class="text-info">Horizon</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false"
+                aria-label="Ouvrir le menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-warning" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formation2.html">Formations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formation2.html#sessions">Sessions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inscription.html">Inscription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inscription.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
         </div>
-      </article>
-    </div>
-  </div>
-</section>
-    </main>  
+    </header>
+
+    <main>
+
+        <!-- presentation -->
+        <section id="accueil" class="accueil text-center text-white py-5 px-3">
+            <div class="container">
+                <h1 class="fw-bold fs-2">Apprenez un métier du numérique</h1>
+
+                <p class="mt-3">
+                    Des formations courtes et concrètes en développement,
+                    données et intelligence artificielle.
+                </p>
+
+                <a href="formation2.html" class="btn btn-warning fw-bold mt-4 px-4 py-2">
+                    Voir les formations
+                </a>
+            </div>
+        </section>
+
+        <!-- formations -->
+        <section id="formations" class="container py-5">
+            <h2 class="titre-section mb-4">Nos formations</h2>
+
+            <div class="row g-4">
+
+                <!-- developpeur web -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
+                        <div class="illustration web">
+                            <div class="code">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="fs-5 fw-bold">Développeur web</h3>
+                            <p>Créer des sites et des applications, du HTML au back-end.</p>
+                            <p class="small text-secondary">Durée : 6 mois &nbsp; Niveau : débutant</p>
+                            <a href="formation2.html">Voir le programme</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- analyste de donnees -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
+                        <div class="illustration donnees">
+                            <div class="barres">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="ligne"></div>
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="fs-5 fw-bold">Analyste de données</h3>
+                            <p>Collecter, nettoyer et présenter des données pour aider à décider.</p>
+                            <p class="small text-secondary">Durée : 5 mois &nbsp; Niveau : débutant</p>
+                            <a href="inscription.html">Demander des informations</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- developpeur ia -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
+                        <div class="illustration ia">
+                            <div class="reseau">
+                                <span class="n n1"></span>
+                                <span class="n n2"></span>
+                                <span class="n n3"></span>
+                                <span class="n n4"></span>
+                                <span class="n n5"></span>
+                                <span class="n n6"></span>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="fs-5 fw-bold">Développeur IA</h3>
+                            <p>Concevoir et intégrer des programmes d'intelligence artificielle.</p>
+                            <p class="small text-secondary">Durée : 12 mois &nbsp; Niveau : intermédiaire</p>
+                            <a href="inscription.html">Demander des informations</a>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- sessions -->
+        <section id="sessions" class="container py-4">
+            <h2 class="titre-section mb-4">Prochaines sessions</h2>
+            <p class="fw-bold small">Sessions ouvertes aux inscriptions</p>
+
+            <div class="table-responsive">
+                <table class="table table-striped align-middle">
+                    <thead class="table-bleu">
+                        <tr>
+                            <th>Formation</th>
+                            <th>Début</th>
+                            <th>Durée</th>
+                            <th>Places</th>
+                            <th>Inscription</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="fw-bold">Développeur web</td>
+                            <td>5 octobre 2026</td>
+                            <td>6 mois</td>
+                            <td>4</td>
+                            <td><a href="inscription.html">S'inscrire</a></td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Analyste de données</td>
+                            <td>2 novembre 2026</td>
+                            <td>5 mois</td>
+                            <td>12</td>
+                            <td><a href="inscription.html">S'inscrire</a></td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Développeur IA</td>
+                            <td>11 janvier 2027</td>
+                            <td>12 mois</td>
+                            <td>0 (liste d'attente)</td>
+                            <td><a href="inscription.html">Liste d'attente</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- contact -->
+        <section id="contact" class="contact py-5">
+            <div class="container">
+                <h2 class="titre-section mb-4">Nous contacter</h2>
+
+                <form action="inscription.html" method="get"
+                    class="formulaire bg-white p-3 p-md-4">
+
+                    <div class="row g-3">
+
+                        <div class="col-12 col-md-6">
+                            <label for="nom" class="form-label fw-bold">Nom</label>
+                            <input type="text" id="nom" name="nom" class="form-control" required>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label for="email" class="form-label fw-bold">Adresse e-mail</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="formation" class="form-label fw-bold">Formation</label>
+                            <select id="formation" name="formation" class="form-select">
+                                <option>Développeur web</option>
+                                <option>Analyste de données</option>
+                                <option>Développeur IA</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="message" class="form-label fw-bold">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input type="checkbox" id="accord" name="accord" class="form-check-input" required>
+                                <label for="accord" class="form-check-label">
+                                    J'accepte que mes données servent à répondre à ma demande.
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-warning fw-bold px-4">
+                                Envoyer
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- pied de page -->
+    <footer class="bg-bleu text-white text-center py-3">
+        <p class="mb-0 small">
+            © 2026 Centre Horizon · 12 rue des Écoles, 60100 Creil
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
