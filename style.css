@@ -135,7 +135,7 @@ table a:hover {
 
 .formulaire {
     max-width: 760px;
-    margin: 0 auto;
+    margin: 0;
     border: 1px solid #d5dbe3;
     border-radius: 6px;
 }
