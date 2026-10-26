@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="p-2 bg-dark text-white d-flex justify-content-between">
         <h5 class="m-1">Centre <span class="text-primary">Horizon</span></h5>
@@ -18,7 +23,151 @@
             <a href="#" class="text-white me-3 text-decoration-none">Contact</a>
         </nav>
     </header>
-<body>
-    
-</body>
-</html>
+
+    <body>
+
+    </body>
+
+</html>/* Charte Centre Horizon */
+:root {
+--bleu-fonce: #0b2a5b;
+--bleu: #1a73e8;
+--bleu-texte: #1557b0;
+--orange: #f9ab00;
+--bleu-clair: #7cc4ff;
+--gris: #f3f4f6;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+color: #1f2937;
+}
+
+a { color: var(--bleu-texte); }
+a:hover { color: var(--bleu-fonce); }
+
+/* Focus visible au clavier */
+a:focus-visible,
+button:focus-visible,
+.nav-link:focus-visible {
+outline: 3px solid var(--orange);
+outline-offset: 2px;
+box-shadow: none;
+}
+
+/* En-tête et pied de page */
+.bg-horizon { background-color: var(--bleu-fonce); }
+.text-bleu-clair { color: var(--bleu-clair); }
+.navbar .nav-link { color: #ffffff; }
+.navbar .nav-link:hover { color: var(--bleu-clair); }
+.navbar .nav-link.active,
+.navbar .nav-link[aria-current="page"] {
+color: var(--orange);
+font-weight: bold;
+}
+
+/* Bandeau */
+.bandeau { background-color: var(--bleu); }
+.badge-horizon {
+background-color: var(--bleu-fonce);
+font-size: 0.9rem;
+padding: 0.6em 1em;
+}
+
+/* Onglets */
+.nav-tabs { border-bottom: 2px solid #d1d5db; }
+.nav-tabs .nav-link {
+color: var(--bleu-fonce);
+background-color: var(--gris);
+margin-right: 4px;
+padding: 0.75rem 1.25rem;
+}
+.nav-tabs .nav-link:hover { background-color: #e5e7eb; }
+.nav-tabs .nav-link.active {
+color: #ffffff;
+background-color: var(--bleu-fonce);
+font-weight: bold;
+border-color: var(--bleu-fonce);
+border-bottom: 3px solid var(--orange);
+}
+
+/* Titres de section */
+.titre-section {
+border-left: 5px solid var(--bleu);
+padding-left: 0.75rem;
+margin-bottom: 1.25rem;
+font-size: 1.6rem;
+}
+
+/* Tableau */
+.table-horizon th {
+background-color: var(--bleu-fonce);
+color: #ffffff;
+}
+
+/* Compétences avec coche */
+.liste-check {
+list-style: none;
+padding: 0;
+}
+.liste-check li {
+position: relative;
+padding-left: 2.25rem;
+margin-bottom: 0.9rem;
+}
+.liste-check li::before {
+content: "✓";
+position: absolute;
+left: 0;
+top: -0.1rem;
+width: 1.5rem;
+height: 1.5rem;
+border-radius: 50%;
+background-color: var(--bleu);
+color: #ffffff;
+font-weight: bold;
+text-align: center;
+line-height: 1.5rem;
+font-size: 0.85rem;
+}
+
+/* Débouchés */
+.metier {
+border: 2px solid var(--bleu);
+color: var(--bleu-texte);
+border-radius: 999px;
+padding: 0.5rem 1rem;
+font-weight: bold;
+}
+
+/* FAQ */
+.accordion-button:not(.collapsed) {
+color: var(--bleu-fonce);
+background-color: var(--gris);
+font-weight: bold;
+}
+
+/* Encadré session */
+.encadre-session {
+background-color: var(--gris);
+border-top: 5px solid var(--orange);
+}
+.encadre-session dt {
+font-weight: normal;
+font-size: 0.9rem;
+color: #4b5563;
+}
+.encadre-session dd {
+font-weight: bold;
+margin-bottom: 0.9rem;
+}
+.btn-orange {
+background-color: var(--orange);
+color: #1f2937;
+font-weight: bold;
+padding: 0.75rem;
+}
+.btn-orange:hover {
+background-color: #e09a00;
+color: #1f2937;
+}
