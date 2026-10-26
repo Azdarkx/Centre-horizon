@@ -1,3 +1,195 @@
-.breadcrumb {
-  --bs-breadcrumb-divider: '>';
-}
+body {
+            font-family: Arial, sans-serif;
+            color: #293444;
+        }
+
+        .bg-bleu {
+            background: #102e5b;
+        }
+
+        .accueil {
+            background: #1e70e8;
+        }
+
+        .accueil p {
+            max-width: 500px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .btn-warning {
+            background: #ffad00;
+            border-color: #ffad00;
+        }
+
+        .titre-section {
+            border-left: 4px solid #1673ff;
+            padding-left: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card {
+            overflow: hidden;
+            border-color: #d5dbe3;
+        }
+
+        .card-body a, table a {
+            color: #0759b5;
+            font-weight: bold;
+        }
+
+        .illustration {
+            height: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .web {
+            background: #2071e8;
+        }
+
+        .code {
+            width: 65%;
+            padding: 20px 12px;
+            background: #102e5b;
+            border-radius: 6px;
+        }
+
+        .code div {
+            height: 4px;
+            width: 50%;
+            margin: 8px 0;
+            background: #75caff;
+            border-radius: 5px;
+        }
+
+        .code div:nth-child(2) { width: 75%; }
+        .code div:nth-child(3) { width: 50%; }
+        .code div:nth-child(4) {
+            width: 60%;
+            background: #ffad00;
+        }
+        .code div:nth-child(5) {
+            width: 35%;
+            background: #ffad00;
+        }
+
+        .donnees {
+            background: #198b40;
+            position: relative;
+        }
+
+        .barres {
+            display: flex;
+            align-items: end;
+            gap: 12px;
+            height: 85px;
+        }
+
+        .barres span {
+            width: 25px;
+            background: white;
+            border-radius: 2px;
+        }
+
+        .barres span:nth-child(1) { height: 45px; }
+        .barres span:nth-child(2) { height: 65px; }
+        .barres span:nth-child(3) { height: 90px; }
+        .barres span:nth-child(4) { height: 55px; }
+
+        .ligne {
+            position: absolute;
+            width: 65%;
+            height: 50px;
+            top: 45px;
+            border-top: 4px solid #ffdc65;
+            transform: rotate(-22deg);
+        }
+
+        .ia {
+            background: #7d1fa0;
+        }
+
+        .reseau {
+            position: relative;
+            width: 65%;
+            height: 100px;
+        }
+
+        .reseau::before {
+            content: "";
+            position: absolute;
+            inset: 10px 0;
+            background:
+                linear-gradient(25deg, transparent 49%, white 50%, transparent 52%),
+                linear-gradient(-15deg, transparent 49%, white 50%, transparent 52%);
+        }
+
+        .n {
+            position: absolute;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .n1 { top: 10px; left: 0; }
+        .n2 { top: 0; left: 48%; }
+        .n3 { top: 42px; left: 48%; }
+        .n4 { top: 70px; left: 0; }
+        .n5 { top: 80px; left: 48%; }
+        .n6 {
+            top: 40px;
+            right: 0;
+            width: 23px;
+            height: 23px;
+            background: #ffdb55;
+        }
+
+        .table-bleu th {
+            color: white;
+            background: #102e5b;
+        }
+
+        .contact {
+            background: #f1f2f5;
+        }
+
+        .formulaire {
+            max-width: 760px;
+            border: 1px solid #d5dbe3;
+            border-radius: 6px;
+        }
+
+        .form-control, .form-select {
+            border-color: #9aa4b3;
+        }
+
+        @media (max-width: 767px) {
+            .accueil h1 {
+                font-size: 1.5rem !important;
+            }
+
+            .accueil {
+                padding-top: 35px !important;
+                padding-bottom: 35px !important;
+            }
+
+            .illustration {
+                height: 135px;
+            }
+
+            .titre-section {
+                font-size: 1.25rem;
+            }
+
+            .formulaire {
+                padding: 12px !important;
+            }
+
+            table {
+                font-size: 0.8rem;
+            }
+        }
