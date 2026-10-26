@@ -185,6 +185,27 @@ footer p {
     margin-bottom: 0;
 }
 
+/* correction de la page contact */
+main .card {
+    height: auto;
+}
+
+main .card-body {
+    height: auto;
+}
+
+main section {
+    margin-bottom: 24px;
+}
+
+.site-footer {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    padding: 16px;
+}
+
+
 /* affichage sur telephone */
 @media (max-width: 767px) {
     .accueil h1 {
