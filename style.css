@@ -2,10 +2,22 @@
 body {
     font-family: Arial, sans-serif;
     color: #0b2a5b;
+    margin: 0;
 }
 
-.bg-bleu {
+.bg-bleu,
+.site-header {
     background-color: #0b2a5b;
+}
+
+.navbar .navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+    color: #f9ab00;
 }
 
 .navbar .nav-link {
@@ -22,9 +34,18 @@ body {
     font-weight: bold;
 }
 
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
 /* bandeau accueil */
 .accueil {
     background-color: #1a73e8;
+    color: white;
 }
 
 .accueil h1 {
@@ -57,7 +78,7 @@ body {
     font-weight: bold;
 }
 
-/* cartes de formation */
+/* cartes */
 .card {
     height: 100%;
     border: 1px solid #d5dbe3;
@@ -107,7 +128,7 @@ table a:hover {
     max-width: 100%;
 }
 
-/* formulaire de contact */
+/* formulaire de la page accueil */
 .contact {
     background-color: #f3f4f6;
 }
@@ -119,15 +140,16 @@ table a:hover {
     border-radius: 6px;
 }
 
-.form-control,
-.form-select {
+/* formulaire de contact */
+main .form-control,
+main .form-select {
     border-color: #9aa4b3;
 }
 
-.form-control:focus,
-.form-select:focus,
-.form-check-input:focus,
-.btn:focus-visible,
+main .form-control:focus,
+main .form-select:focus,
+main .form-check-input:focus,
+main .btn:focus-visible,
 a:focus-visible,
 .navbar-toggler:focus-visible {
     border-color: #1a73e8;
@@ -136,10 +158,31 @@ a:focus-visible,
     box-shadow: none;
 }
 
-/* pied de page */
-footer {
+main .form-check-input:checked {
+    background-color: #1a73e8;
+    border-color: #1a73e8;
+}
+
+main .btn-primary {
     background-color: #0b2a5b;
+    border-color: #0b2a5b;
+}
+
+main .btn-primary:hover {
+    background-color: #1a73e8;
+    border-color: #1a73e8;
+}
+
+/* pied de page */
+footer,
+.site-footer {
+    background-color: #0b2a5b;
+    color: white;
     font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 0;
 }
 
 /* affichage sur telephone */
@@ -167,5 +210,10 @@ footer {
 
     .table {
         font-size: 0.85rem;
+    }
+
+    main {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
     }
 }
