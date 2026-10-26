@@ -206,7 +206,7 @@ main section {
 }
 
 
-/* affichage sur telephone */
+/* affichage sur telephonE */
 @media (max-width: 767px) {
     .accueil h1 {
         font-size: 1.6rem;
