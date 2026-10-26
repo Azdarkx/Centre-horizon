@@ -1,10 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 210" width="350" height="210">
-  <rect width="350" height="210" fill="#1e8e3e"/>
-  <g fill="#ffffff">
-    <rect x="62" y="105" width="35" height="70" rx="2"/>
-    <rect x="114" y="79" width="35" height="96" rx="2"/>
-    <rect x="166" y="53" width="35" height="122" rx="2"/>
-    <rect x="218" y="88" width="35" height="87" rx="2"/>
+  <rect width="350" height="210" fill="#7b1fa2"/>
+  <g stroke="#d7b8e8" stroke-width="3">
+    <line x1="78" y1="61" x2="174" y2="43"/>
+    <line x1="78" y1="61" x2="174" y2="104"/>
+    <line x1="78" y1="148" x2="174" y2="104"/>
+    <line x1="78" y1="148" x2="174" y2="165"/>
+    <line x1="174" y1="43" x2="270" y2="104"/>
+    <line x1="174" y1="104" x2="270" y2="104"/>
+    <line x1="174" y1="165" x2="270" y2="104"/>
   </g>
-  <polyline points="60,87 166,35 218,70 280,26" fill="none" stroke="#fdd663" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#ffffff">
+    <circle cx="78" cy="61" r="14"/>
+    <circle cx="78" cy="148" r="14"/>
+    <circle cx="174" cy="43" r="14"/>
+    <circle cx="174" cy="104" r="14"/>
+    <circle cx="174" cy="165" r="14"/>
+  </g>
+  <circle cx="270" cy="104" r="17" fill="#fdd663"/>
 </svg>
